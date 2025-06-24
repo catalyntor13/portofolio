@@ -21,7 +21,7 @@ export default function SunsetOrangeHero() {
         "Full-stack app built with Next.js, Supabase, and Stripe. Helps fitness coaches get more clients and manage subscriptions easily.",
       bgColor: "bg-gradient-to-br from-orange-600 to-red-700",
       textColor: "text-white",
-      link: `https://active-fit.vercel.app/``
+      link: `https://active-fit.vercel.app/`
     },
     {
       title: "IDToro",
