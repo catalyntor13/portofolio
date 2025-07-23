@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
@@ -7,6 +8,10 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export default function Header() {
+
+  const [open, setOpen] = useState(false)
+
+
   const navItems = [
     { name: "Skills", href: "#skills" },
     { name: "Despre", href: "#about" },
@@ -53,7 +58,7 @@ export default function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6" />
@@ -63,7 +68,7 @@ export default function Header() {
             side="left" className="bg-gradient-to-b from-black to-green-500 border-none w-[250px]">
             <div className="flex flex-col gap-6 py-15 px-5">
               {navItems.map((item) => (
-                <Link
+                <Link onClick={() => setOpen(false)}
                   key={item.name}
                   href={item.href}
                   className="text-lg bg-green-600 text-white p-2 rounded-lg font-medium"
