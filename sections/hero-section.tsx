@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative  flex items-center justify-center overflow-hidden px-6 md:px-0 py-30 ">
+    <section id="home" className="relative  flex items-center justify-center overflow-hidden px-6 md:px-0 py-30 ">
       <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-gray-900 blur-xl rounded-4xl opacity-40 hover:opacity-60 transition-opacity duration-500 animate-pulse" />
 
       <div className="container relative z-10 ">

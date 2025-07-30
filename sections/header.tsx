@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import scrollToId from "@/lib/scrollToId";
 
 export default function Header() {
 
@@ -13,11 +14,11 @@ export default function Header() {
 
 
   const navItems = [
-    { name: "Skills", href: "#skills" },
-    { name: "Despre", href: "#about" },
-    { name: "Servicii", href: "#services" },
-    { name: "Portofoliu", href: "#portfolio" },
-    { name: "Proiecte", href: "#projects" },
+    { name: "Skills", href: "skills" },
+    { name: "Despre", href: "about" },
+    { name: "Servicii", href: "services" },
+    { name: "Proiecte", href: "projects" },
+    { name: "Contact", href: "contact" },
   ];
 
   return (
@@ -28,7 +29,7 @@ export default function Header() {
       className="fixed top-0 z-50 w-full backdrop-blur-md"
     >
       <div className="container flex h-16 items-center md:justify-around justify-around mt-5">
-        <Link href="/" className="flex items-center gap-2">
+          <button className="cursor-pointer" onClick={() => scrollToId("home", 80, 1200)}>
           <motion.span
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -36,7 +37,7 @@ export default function Header() {
           >
             Portofolio
           </motion.span>
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
@@ -47,12 +48,12 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}
             >
-              <Link
-                href={item.href}
-                className="text-lg font-bold transition-colors hover:text-green-500"
-              >
-                {item.name}
-              </Link>
+               <button
+            onClick={() => scrollToId(item.href, 80, 1200)} // 80 = înălțime header
+            className="text-lg font-bold transition-colors hover:text-green-500 cursor-pointer"
+          >
+            {item.name}
+          </button>
             </motion.div>
           ))}
         </nav>

@@ -43,7 +43,7 @@ export default function ProjectsSection() {
     return (
         <section
   id="projects"
-  className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden"
+  className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden scroll-mt-20"
 >
   <div className="container mx-auto px-6 relative z-10">
     {/* Header */}
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
+        
         >
           <Card className="group relative bg-[#1f2937] border border-white/10 rounded-2xl shadow-xl overflow-hidden transition-all hover:shadow-2xl hover:border-white/20">
             <CardContent className="p-0 relative z-10 cursor-pointer">

@@ -4,6 +4,7 @@ import Image from "next/image"
 import Nextjs from '@/public/nextjs-icon-light-background.svg'
 import TailwindIcon from '@/public/tailwindcss.svg'
 import Motion from '@/public/motion.png'
+import Supabase from '@/public/supabase-logo-icon.png'
 
 export default function SkillsSection() {
 
@@ -28,6 +29,14 @@ export default function SkillsSection() {
       icon: Motion,
       title: "Motion",
       description: "Animații fluide și interactive pentru o experiență captivantă",
+      gradient: "from-purple-500 to-pink-500",
+      bgGradient: "from-purple-500/10 to-pink-500/10",
+      borderGradient: "from-purple-500/30 to-pink-500/30",
+    },
+      {
+      icon: Supabase,
+      title: "Supabase",
+      description: "Backend as a Service (BaaS) pentru gestionarea rapidă a datelor și autentificării",
       gradient: "from-purple-500 to-pink-500",
       bgGradient: "from-purple-500/10 to-pink-500/10",
       borderGradient: "from-purple-500/30 to-pink-500/30",
@@ -61,7 +70,7 @@ export default function SkillsSection() {
          
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {skills.map((skill, index) => (
             <Card
               key={skill.title}

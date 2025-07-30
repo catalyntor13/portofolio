@@ -5,7 +5,7 @@ import { User } from "lucide-react"
 
 export default function AboutSection() {
     return (
-        <section id="about" className="md:p-20 p-5 bg-gradient-to-br from-gray-900  to-gray-800 overflow-hidden pb-10">
+        <section id="about" className="md:p-20 p-5 bg-gradient-to-br from-gray-900  to-gray-800 overflow-hidden pb-10 scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-center gap-5">
              <div
@@ -21,9 +21,13 @@ export default function AboutSection() {
           </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div className="grid md:grid-cols-2 gap-12 items-center"
+          
+            initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}>
             <div
-           
+        
                >
               
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -45,7 +49,7 @@ export default function AboutSection() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     )

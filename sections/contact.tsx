@@ -97,7 +97,7 @@ const contactInfo = [
     return (
         <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-green-900 via-gray-800 to-green-500 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-green-900 via-gray-800 to-green-500 relative overflow-hidden scroll-mt-20"
     >
       
 
