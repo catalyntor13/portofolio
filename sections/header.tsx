@@ -69,13 +69,12 @@ export default function Header() {
             side="left" className="bg-gradient-to-b from-black to-green-500 border-none w-[250px]">
             <div className="flex flex-col gap-6 py-15 px-5">
               {navItems.map((item) => (
-                <Link onClick={() => setOpen(false)}
-                  key={item.name}
-                  href={item.href}
-                  className="text-lg bg-green-600 text-white p-2 rounded-lg font-medium"
-                >
-                  {item.name}
-                </Link>
+                 <button
+            onClick={() => scrollToId(item.href, 80, 1200)} // 80 = înălțime header
+            className="text-lg font-bold transition-colors hover:text-green-500 cursor-pointer"
+          >
+            {item.name}
+          </button>
               ))}
             </div>
           </SheetContent>
