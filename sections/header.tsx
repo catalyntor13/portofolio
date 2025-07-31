@@ -7,6 +7,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import scrollToId from "@/lib/scrollToId";
+import { set } from "zod";
 
 export default function Header() {
 
@@ -70,11 +71,14 @@ export default function Header() {
             <div className="flex flex-col gap-6 py-15 px-5">
               {navItems.map((item) => (
                  <button
-            onClick={() => scrollToId(item.href, 80, 1200)} // 80 = înălțime header
-            className="text-lg font-bold transition-colors hover:text-green-500 cursor-pointer"
-          >
-            {item.name}
-          </button>
+  onClick={() => {
+    scrollToId(item.href, 80, 1200)
+    setOpen(false)
+  }}
+  className="text-lg font-bold transition-colors hover:text-green-500 cursor-pointer"
+>
+  {item.name}
+</button>
               ))}
             </div>
           </SheetContent>

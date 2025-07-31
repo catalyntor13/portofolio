@@ -34,7 +34,7 @@ export default function ProjectsSection() {
       description:
         "Un proiect personal de SaaS cu sistem complet de autentificare (login/register) și integrare Stripe pentru plăți recurente.",
       image: "/saas.png",
-      demoUrl: "#",
+      demoUrl: "https://mysaaskit.vercel.app/",
 
     },
     
