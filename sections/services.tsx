@@ -13,9 +13,9 @@ export default function ServicesSection() {
       title: "Landing Page",
       description:
         "Ideal pentru o prezență online rapidă și eficientă, axată pe un singur obiectiv. Perfect pentru lansări de produse, evenimente sau colectare de lead-uri.",
-      price: "$250",
+      price: "€250",
       features: [
-        "O singura pagina moderna și responsiv: Design atractiv, adaptabil pe orice dispozitiv (mobil, tabletă, desktop).",
+        "1-3 Pagini moderne și responsive: Design atractiv, adaptabil pe orice dispozitiv (mobil, tabletă, desktop).",
         "Structură optimizată pentru conversie",
         "SEO de bază (meta titluri, descrieri)",
         "Formular de contact integrat",
@@ -27,9 +27,9 @@ export default function ServicesSection() {
       title: "Website Prezentare",
       description:
         "Soluția optimă pentru afacerile care necesită o prezență online mai complexă, cu multiple secțiuni pentru servicii, portofoliu sau informații detaliate.",
-      price: "$500",
+      price: "€500",
       features: [
-        "Website cu 3-5 Pagini: (ex: Acasă, Despre Noi, Servicii/Portofoliu, Contact).",
+        "Website cu pagini multiple: (ex: Acasă, Despre Noi, Servicii/Portofoliu, Contact).",
         "Design Personalizat: Aspect unic, în linie cu identitatea vizuală a brandului tău.",
         "Formulare Avansate: Formular de contact detaliat",
         "SEO Avansat: Optimizare extinsă pentru vizibilitate în căutări.",
