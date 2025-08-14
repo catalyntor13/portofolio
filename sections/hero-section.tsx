@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import scrollToId from "@/lib/scrollToId";
 
 export default function HeroSection() {
+
+
   return (
     <section id="home" className="relative  flex items-center justify-center overflow-hidden px-6 md:px-0 py-30 ">
       <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-gray-900 blur-xl rounded-4xl opacity-40 hover:opacity-60 transition-opacity duration-500 animate-pulse" />
@@ -52,6 +54,7 @@ export default function HeroSection() {
             className="flex flex-col md:flex-row gap-4 justify-center"
           >
             <Button
+              onClick={() => scrollToId("projects", 80, 1200)}
               size="lg"
               className="bg-green-700  text-white font-medium "
             >
@@ -59,11 +62,12 @@ export default function HeroSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
+              onClick={() => scrollToId("contact", 80, 1200)}
               variant="outline"
               size="lg"
               className="bg-transparent border-green-600 text-white font-medium "
             >
-             <Link href='#contact'>Contactează-mă</Link> 
+             Contactează-mă
             </Button>
           </motion.div>
         </motion.div>

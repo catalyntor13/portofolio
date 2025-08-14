@@ -1,20 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import scrollToId from "@/lib/scrollToId";
-import { set } from "zod";
+
 
 export default function Header() {
 
   const [open, setOpen] = useState(false)
 
 
-  const navItems = [
+     const navItems = [
     { name: "Skills", href: "skills" },
     { name: "Despre", href: "about" },
     { name: "Servicii", href: "services" },
