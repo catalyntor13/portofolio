@@ -25,7 +25,7 @@ export default function HeroSection() {
   src="/profile.jpg"
   width={100}
   height={100}
-  alt="Your Name - Creative Avatar"
+  alt="Catalin Toro - Creative Avatar"
   className="relative w-37 h-37 md:w-48 md:h-48 object-cover object-top rounded-full mx-auto shadow-2xl transition-all duration-500 hover:scale-105"
 />
             
@@ -37,7 +37,7 @@ export default function HeroSection() {
           >
             <span className="text-green-500">Salut,</span> sunt Catalin
           </motion.h1>
-          <h1 className="text-2xl md:text-3xl text-white/30 font-medium my-3">Web Developer</h1>
+          <h1 className="text-2xl md:text-3xl text-white/30 font-medium my-3">Dezvoltator Web</h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

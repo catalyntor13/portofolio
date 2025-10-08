@@ -30,11 +30,21 @@ export default function ProjectsSection() {
     },
     {
       id: 3,
-      title: "EcoCorp",
+      title: "Gradinita Busy Bee",
       description:
-        "Un proiect personal de SaaS cu sistem complet de autentificare (login/register) și integrare Stripe pentru plăți recurente.",
-      image: "/saas.png",
-      demoUrl: "https://mysaaskit.vercel.app/",
+        "Landing Page pentru o gradinita locala. Cod curat cu animatii",
+      image: "/gradinita.png",
+      demoUrl: "https://gradinitabusybee.ro/",
+
+    },
+
+    {
+      id: 4,
+      title: "Video Editor - Landing Page",
+      description:
+        "Landing Page pentru un video editor. Include si animatii",
+      image: "/editor.png",
+      demoUrl: "https://ady-toro.vercel.app/",
 
     },
     
@@ -78,7 +88,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.4, ease: "easeOut" }}
         
         >
-          <Card className="group relative bg-[#1f2937] border border-white/10 rounded-2xl shadow-xl overflow-hidden transition-all hover:shadow-2xl hover:border-white/20">
+          <Card className="group relative bg-[#1f2937] border border-white/10  shadow-xl overflow-hidden transition-all hover:shadow-2xl hover:border-white/20">
             <CardContent className="p-0 relative z-10 cursor-pointer">
               {/* Image */}
               <div className="relative overflow-hidden">
@@ -87,7 +97,7 @@ export default function ProjectsSection() {
                   alt={project.title}
                   width={500}
                   height={300}
-                  className="w-full h-48 object-cover  transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500 rounded-t-2xl" />
