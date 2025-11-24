@@ -4,14 +4,19 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import {
   Github,
-  Linkedin,
   Mail,
   ArrowUp,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { FaXTwitter } from "react-icons/fa6";
+
+
 
 export default function Footer() {
   const [showBackToTop, setShowBackToTop] = useState(false)
+
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +32,7 @@ export default function Footer() {
   }
 
   const navigationLinks = [
-    { name: "Acasă", href: "#home" },
+
     { name: "Despre", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Proiecte", href: "#projects" },
@@ -37,15 +42,15 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "GitHub",
-      href: "#",
+      href: "https://github.com/catalyntor13",
       icon: Github,
       gradient: "from-gray-600 to-gray-800",
-      hoverColor: "hover:text-gray-300",
+      hoverColor: "hover:text-blue-400",
     },
     {
-      name: "LinkedIn",
-      href: "#",
-      icon: Linkedin,
+      name: "Twitter",
+      href: "https://x.com/@catalintorro",
+      icon: FaXTwitter,
       gradient: "from-blue-600 to-blue-800",
       hoverColor: "hover:text-blue-400",
     },
@@ -54,27 +59,18 @@ export default function Footer() {
       href: "mailto:torobuisnessro@yahoo.com",
       icon: Mail,
       gradient: "from-green-600 to-emerald-600",
-      hoverColor: "hover:text-green-400",
+      hoverColor: "hover:text-blue-400",
     },
   ]
 
-  const quickContact = [
-    {
-      icon: Mail,
-      text: "torobuisnessro@yahoo.com",
-      href: "mailto:torobuisnessro@yahoo.com",
-      gradient: "bg-green-500",
-    },
-   
-  ]
 
   return (
-    <footer className="relative bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
+    <footer className="relative bg-slate-950 border-t border-slate-900 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(34,197,94,0.1),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(59,130,246,0.1),transparent_50%)]" />
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-green-500/50 to-transparent" />
-
+      
+<div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[140px]" />
+        
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-ping opacity-20" />
@@ -84,24 +80,24 @@ export default function Footer() {
 
       <div className="container px-6 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-3  gap-8 py-16">
+        <div className="grid md:grid-cols-2  gap-8 py-16">
          
 
           {/* Navigation Links */}
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
               Navigare
-              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 rounded-full" />
+              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
             </h4>
             <ul className="space-y-3">
               {navigationLinks.map((link, index) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:translate-x-1 inline-flex items-center group"
+                    className="text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1 inline-flex items-center group"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-green-400 transition-all duration-300 mr-0 group-hover:mr-2 rounded-full" />
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-300 transition-all duration-300 mr-0 group-hover:mr-2 rounded-full" />
                     {link.name}
                   </Link>
                 </li>
@@ -109,42 +105,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Quick Contact */}
-          <div className="md:col-span-1 md:mx-auto">
-            <h4 className="text-lg font-semibold text-white mb-6 relative">
-              Contact Rapid
-              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 rounded-full" />
-            </h4>
-            <ul className="space-y-4">
-              {quickContact.map((contact, index) => {
-                const IconComponent = contact.icon
-                return (
-                  <li key={contact.text}>
-                    <Link
-                      href={contact.href}
-                      className="flex items-center gap-3 text-gray-400 hover:text-gray-200 transition-all duration-300 group"
-                      style={{ animationDelay: `${index * 150}ms` }}
-                    >
-                      <div
-                        className={`w-8 h-8 bg-gradient-to-r ${contact.gradient} bg-opacity-20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        <IconComponent className="h-4 w-4 text-white group-hover:text-white transition-colors duration-300" />
-                      </div>
-                      <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">
-                        {contact.text}
-                      </span>
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-
+          
           {/* Social & Newsletter */}
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
               Conectează-te
-              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 rounded-full" />
+              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
             </h4>
             <p className="text-gray-400 text-sm mb-4">Urmărește-mă pentru actualizări și proiecte noi</p>
             <div className="flex gap-3 mb-6">
@@ -181,7 +147,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-800/50 py-8">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <div className="flex items-center  gap-4 text-sm text-gray-500">
+            <div className="flex items-center  gap-4 text-sm text-cyan-400">
               <p>&copy; {new Date().getFullYear()} Catalin Toro. Toate drepturile rezervate.</p>
               
             </div>
@@ -195,12 +161,13 @@ export default function Footer() {
       {showBackToTop && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
+          className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:from-gray-200 hover:to-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
           size="icon"
         >
           <ArrowUp className="h-5 w-5" />
         </Button>
       )}
+     
     </footer>
   )
 }

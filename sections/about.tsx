@@ -1,25 +1,41 @@
 "use client"
 import Image from "next/image";
 import { motion } from "framer-motion"
-import { User } from "lucide-react"
+import { User2 } from "lucide-react"
 
 export default function AboutSection() {
     return (
-        <section id="about" className="md:p-20 p-5 bg-gradient-to-br from-gray-900  to-gray-800 overflow-hidden pb-10 scroll-mt-20">
+        <section id="about" className="md:p-20 p-5 bg-slate-950 overflow-hidden pb-10 scroll-mt-20">
         <div className="container mx-auto px-6">
-          <div className="flex items-center justify-center gap-5">
-             <div
-              className="relative">
-                            
-              <User className="h-8 w-8 text-green-400 animate-bounce" />
-              <div className="absolute inset-0 h-8 w-8 text-green-400 animate-ping opacity-20">
-                <User className="h-8 w-8" />
-                </div>
-            </div>
-          <h2 className="text-4xl font-bold py-10 ">
-            Despre <span className="text-green-400">Mine</span>
-          </h2>
-          </div>
+          <div className="relative flex flex-col items-center justify-center mb-16 z-10">
+  {/* Eticheta mică de sus */}
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4"
+  >
+    <User2 className="w-5 h-5" />
+    <span>Cine sunt eu ?</span>
+  </motion.div>
+
+  {/* Titlul Principal */}
+  <motion.h2 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.1 }}
+    className="text-4xl md:text-5xl font-bold text-center"
+  >
+    <span className="text-white">Despre </span>
+    <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+      Mine  
+    </span>
+  </motion.h2>
+  
+  {/* Glow Effect în spate (foarte subtil) */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-500/20 blur-[50px] rounded-full -z-10 pointer-events-none" />
+</div>
           
           <motion.div className="grid md:grid-cols-2 gap-12 items-center"
           
@@ -30,11 +46,11 @@ export default function AboutSection() {
         
                >
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Sunt un dezvoltator web axat pe front-end si pasionat de experiența utilizatorului și performanța web. Mă concentrez pe crearea de interfețe rapide, fluide și animate, care nu doar arată bine, ci și se mișcă natural.
+              <p className="text-gray-200 text-lg mb-6 leading-relaxed ">
+                Sunt un Front-End Developer pasionat de detaliile vizuale și experiența utilizatorului. Nu construiesc doar pagini statice, ci interfețe fluide care reacționează natural la fiecare interacțiune.
               </p>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Folosesc tehnologii populare precum Next.js, Tailwind CSS, Framer Motion pentru a construi și livra rapid site-uri de prezentare și landing pages rapide, responsive și optimizate pentru performanță și conversie.
+              <p className="text-gray-200 text-lg mb-6 leading-relaxed ">
+           Specializat în ecosistemul React (Next.js), mă concentrez pe performanță și animații rafinate. Utilizez soluții moderne precum Supabase pentru a gestiona datele, ceea ce îmi permite să livrez aplicații funcționale complete, păstrând focusul principal pe o experiență vizuală impecabilă."
               </p>
              
             </div>
