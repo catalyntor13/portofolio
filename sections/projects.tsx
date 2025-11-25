@@ -100,6 +100,7 @@ export default function ProjectsSection() {
                 
                 {/* Image Container with Zoom Effect */}
                 <div className="relative aspect-video overflow-hidden">
+                    <Link href={project.demoUrl} target="_blank">
                     <div className="absolute inset-0 bg-slate-900/20 z-10 group-hover:bg-transparent transition-colors duration-500" />
                     <Image
                         src={project.image || "/placeholder.svg"}
@@ -108,15 +109,8 @@ export default function ProjectsSection() {
                         height={450}
                         className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    
-                    {/* Floating Action Button (apare la hover) */}
-                    <div className="absolute top-4 right-4 z-20 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
-                        <Link href={project.demoUrl} target="_blank">
-                             <div className="bg-white text-slate-950 p-2 rounded-full shadow-lg hover:bg-blue-400 hover:text-white transition-colors">
-                                <ArrowUpRight className="w-5 h-5" />
-                             </div>
-                        </Link>
-                    </div>
+                     </Link>
+                  
                 </div>
 
                 <CardContent className="p-8 flex flex-col flex-grow relative">
