@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import {
   Github,
-  Mail,
+  Instagram,
   ArrowUp,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -33,9 +33,8 @@ export default function Footer() {
 
   const navigationLinks = [
 
-    { name: "Despre", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Proiecte", href: "#projects" },
+    { name: "Projects", href: "#projects" },
+    { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
   ]
 
@@ -55,9 +54,9 @@ export default function Footer() {
       hoverColor: "hover:text-blue-400",
     },
     {
-      name: "Email",
-      href: "mailto:torobuisnessro@yahoo.com",
-      icon: Mail,
+      name: "Instagram",
+      href: "https://www.instagram.com/catalynn13",
+      icon: Instagram,
       gradient: "from-green-600 to-emerald-600",
       hoverColor: "hover:text-blue-400",
     },
@@ -67,10 +66,10 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-950 border-t border-slate-900 overflow-hidden">
       {/* Background decoration */}
-      
-<div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[140px]" />
-        
+
+      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[140px]" />
+
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-ping opacity-20" />
@@ -81,12 +80,12 @@ export default function Footer() {
       <div className="container px-6 relative z-10">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2  gap-8 py-16">
-         
+
 
           {/* Navigation Links */}
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
-              Navigare
+              Navigation
               <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
             </h4>
             <ul className="space-y-3">
@@ -105,14 +104,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          
+
           {/* Social & Newsletter */}
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
-              Conectează-te
+              Connect
               <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
             </h4>
-            <p className="text-gray-400 text-sm mb-4">Urmărește-mă pentru actualizări și proiecte noi</p>
+            <p className="text-gray-400 text-sm mb-4">Follow me for updates and new projects</p>
             <div className="flex gap-3 mb-6">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon
@@ -139,7 +138,7 @@ export default function Footer() {
             {/* Status indicator */}
             <div className="flex items-center gap-2 text-sm">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-gray-400">Disponibil pentru proiecte</span>
+              <span className="text-gray-400">Available for projects</span>
             </div>
           </div>
         </div>
@@ -148,11 +147,11 @@ export default function Footer() {
         <div className="border-t border-gray-800/50 py-8">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <div className="flex items-center  gap-4 text-sm text-cyan-400">
-              <p>&copy; {new Date().getFullYear()} Catalin Toro. Toate drepturile rezervate.</p>
-              
+              <p>&copy; {new Date().getFullYear()} Catalin Toro. All rights reserved.</p>
+
             </div>
 
-          
+
           </div>
         </div>
       </div>
@@ -167,7 +166,7 @@ export default function Footer() {
           <ArrowUp className="h-5 w-5" />
         </Button>
       )}
-     
+
     </footer>
   )
 }

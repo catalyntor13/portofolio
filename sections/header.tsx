@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import scrollToId from "@/lib/scrollToId";
-import { cn } from "@/lib/utils"; 
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -20,9 +20,8 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: "Despre", href: "about" },
-    { name: "Skills", href: "skills" },
-    { name: "Proiecte", href: "projects" },
+    { name: "Projects", href: "projects" },
+    { name: "Services", href: "services" },
     { name: "Contact", href: "contact" },
   ];
 
@@ -33,15 +32,15 @@ export default function Header() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 px-4 pointer-events-none" // pointer-events-none pe wrapper ca să poți da click pe laterale
     >
-      <div 
+      <div
         className={cn(
           "pointer-events-auto flex items-center justify-between px-6 transition-all duration-300 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl shadow-black/50",
           scrolled ? "w-[90%] md:w-[60%] h-14 bg-slate-950/80" : "w-[95%] md:w-[70%] h-16 bg-slate-950/60"
         )}
       >
         {/* Logo Area */}
-        <button 
-          className="group flex items-center gap-2 cursor-pointer focus:outline-none" 
+        <button
+          className="group flex items-center gap-2 cursor-pointer focus:outline-none"
           onClick={() => scrollToId("home", 80, 1200)}
         >
           <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(59,130,246,0.5)] group-hover:scale-110 transition-transform">
@@ -77,9 +76,9 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="top" className="w-full h-screen bg-slate-950/95 backdrop-blur-xl border-b border-white/10 p-0">
               <div className="flex flex-col items-center justify-center h-full gap-8">
-                 <SheetClose className="absolute top-6 right-6 text-slate-400 hover:text-white">
-                    <X className="w-8 h-8" />
-                 </SheetClose>
+                <SheetClose className="absolute top-6 right-6 text-slate-400 hover:text-white">
+
+                </SheetClose>
                 {navItems.map((item, i) => (
                   <motion.button
                     initial={{ opacity: 0, y: 20 }}
