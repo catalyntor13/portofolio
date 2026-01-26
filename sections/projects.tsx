@@ -10,16 +10,14 @@ const projects = [
     {
         id: 1,
         title: "IDToro",
-        description: "A modern and responsive landing page for an IT services company. Clean design, implemented with Next.js and Tailwind CSS.",
         image: "/idtoro.png",
-        tags: ["Next.js", "Tailwind", "Neon", "Stripe"],
+        tags: ["Next.js", "Tailwind", "Motion"],
         demoUrl: "https://idtoro.vercel.app/",
 
     },
     {
         id: 2,
         title: "Active Boost",
-        description: "Full Stack application with modern design including payments, database, email automation",
         image: "/activeboost.png",
         tags: ["Next.js", "Mollie", "Neon", "Tailwind"],
         demoUrl: "https://activeboost.ro",
@@ -28,9 +26,8 @@ const projects = [
     {
         id: 3,
         title: "Gradinita Busy Bee",
-        description: "Responsive and modern landing page with animations",
         image: "/gradinita.png",
-        tags: ["Next.js", "Tailwind", "Motion"],
+        tags: ["Next.js", "Tailwind", "Motion", "Mollie"],
         demoUrl: "https://gradinitabusybee.ro/",
 
     },
@@ -38,7 +35,6 @@ const projects = [
     {
         id: 4,
         title: "Video Editor - Landing Page",
-        description: "A new landing page",
         image: "/editor.png",
         tags: ["Next.js", "Tailwind", "Motion"],
         demoUrl: "https://ady-toro.vercel.app/",
@@ -60,7 +56,7 @@ export default function ProjectsSection() {
                         className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4"
                     >
                         <Rocket className="w-4 h-4" />
-                        <span>Proiecte</span>
+                        <span>Portfolio</span>
                     </motion.div>
 
                     <motion.h2
@@ -70,7 +66,7 @@ export default function ProjectsSection() {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-4xl font-bold text-white mb-4"
                     >
-                        Selected Work <span className="text-slate-600">.</span>
+                        Recent Projects
                     </motion.h2>
 
                     <motion.p
@@ -84,8 +80,8 @@ export default function ProjectsSection() {
                     </motion.p>
                 </div>
 
-                {/* Projects Grid - 3 Columns & Compact Cards */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {/* Projects Grid - 3 Columns & Visual Cards */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.id}
@@ -93,48 +89,46 @@ export default function ProjectsSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group h-full"
+                            className="group"
                         >
-                            <Link href={project.demoUrl} target="_blank" className="block h-full">
+                            <Link href={project.demoUrl} target="_blank" className="block">
                                 <div className={cn(
-                                    "relative h-full flex flex-col rounded-xl overflow-hidden bg-slate-900/40 border border-slate-800 transition-all duration-500",
-                                    "hover:border-slate-600 hover:bg-slate-900/60 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/10"
+                                    "relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 transition-all duration-500 group-hover:border-slate-600 group-hover:shadow-2xl group-hover:shadow-blue-500/10"
                                 )}>
-                                    {/* Image Area */}
-                                    <div className="relative h-48 overflow-hidden">
-                                        <div className="absolute inset-0 bg-slate-950/20 z-10 group-hover:bg-transparent transition-colors duration-500" />
+                                    {/* Image Area - Aspect Video */}
+                                    <div className="relative aspect-video overflow-hidden">
+                                        <div className="absolute inset-0 bg-slate-950/10 z-10 group-hover:bg-transparent transition-colors duration-500" />
                                         <Image
                                             src={project.image || "/placeholder.png"}
                                             alt={project.title}
                                             fill
                                             className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                         />
-                                        {/* Overlay Arrow */}
-                                        <div className="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-slate-950/80 backdrop-blur text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 border border-slate-800">
-                                            <ArrowUpRight className="w-4 h-4" />
+                                        {/* Overlay Title for clean look */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-20 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                            <div className="flex items-center justify-between">
+                                                <span className="text-white font-semibold text-sm">{project.title}</span>
+                                                <ArrowUpRight className="w-4 h-4 text-blue-400" />
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div className="p-5 flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors line-clamp-1">
-                                            {project.title}
-                                        </h3>
-                                        <p className="text-slate-400 text-sm mb-4 leading-relaxed line-clamp-2 flex-grow">
-                                            {project.description}
-                                        </p>
-
-                                        <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-800/50">
-                                            {project.tags.slice(0, 3).map((tag) => (
+                                    {/* Bottom Info - minimal */}
+                                    <div className="p-4 bg-slate-950/50 backdrop-blur-sm border-t border-slate-800">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <h3 className="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">
+                                                {project.title}
+                                            </h3>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.tags.map((tag) => (
                                                 <span
                                                     key={tag}
-                                                    className="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold text-slate-400 bg-slate-950 rounded-md border border-slate-800 group-hover:border-slate-700 transition-colors"
+                                                    className="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold text-slate-400 bg-slate-900/50 rounded-md border border-slate-800 group-hover:border-slate-700 transition-colors"
                                                 >
                                                     {tag}
                                                 </span>
                                             ))}
-                                            {project.tags.length > 3 && (
-                                                <span className="px-2 py-1 text-[10px] text-slate-500">+</span>
-                                            )}
                                         </div>
                                     </div>
                                 </div>

@@ -16,8 +16,6 @@ export default function Footer() {
   const [showBackToTop, setShowBackToTop] = useState(false)
 
 
-
-
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300)

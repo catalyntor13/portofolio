@@ -83,11 +83,9 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-lg text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed"
+            className="text-base lg:text-lg  text-slate-400 max-w-xl mx-auto mb-4 mt-2 leading-relaxed"
           >
-            Web Developer passionate about building modern digital experiences.
-            I turn ideas into simple, fast, and scalable interfaces.
-
+            I am a web developer passionate about the world of technology and finance. I build fast and scalable applications, emphasizing simplicity and performance.
           </motion.p>
 
           {/* Tech Stack Centered Row */}
