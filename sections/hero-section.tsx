@@ -73,7 +73,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Hi, I am <br className="md:hidden" />
+            Hi, I am <br className="hidden" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 animate-gradient">
               Catalin
             </span>
