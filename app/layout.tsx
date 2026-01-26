@@ -13,21 +13,51 @@ const Jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.catalintorro.com'),
   title: "Catalin Toro - Web Developer",
   description: "Personal website of Catalin Toro, a web developer with expertise in Next.js, React, Tailwind, and Framer Motion.",
-  keywords: ["Catalin Toro", "dezvoltator web", "Trader", "Next.js", "React", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Neon", "IDToro", "Active Boost", "Gradinita Busy Bee", "Web developer", "antreprenor", "antreprenoriat", "antreprenoriat digital", "Servicii de dezvoltare web", "dezvoltare web", "dezvoltare web digitala",],
+  keywords: ["Catalin Toro", "Web Developer", "Trader", "Next.js", "React", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Neon", "IDToro", "Active Boost", "Busy Bee Kindergarten", "Entrepreneur", "Digital Entrepreneurship", "Web Development Services", "Web Development", "Digital Web Development"],
   authors: [
     {
       name: "Catalin Toro",
-      url: "https://catalin-dev.com",
+      url: "https://www.catalintorro.com",
     },
   ],
   openGraph: {
     title: "Catalin Toro - Web Developer",
     description: "Personal website of Catalin Toro, a web developer with expertise in Next.js, React, Tailwind, and Framer Motion.",
-    type: "website",
-    locale: "ro_RO",
+    url: "https://www.catalintorro.com",
     siteName: "Catalin Toro - Web Developer",
+    images: [
+      {
+        url: "/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Catalin Toro - Web Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Catalin Toro - Web Developer",
+    description: "Personal website of Catalin Toro, a web developer with expertise in Next.js, React, Tailwind, and Framer Motion.",
+    images: ["/profile.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.catalintorro.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
