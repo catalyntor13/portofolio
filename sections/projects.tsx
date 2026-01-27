@@ -34,7 +34,7 @@ const projects = [
 
     {
         id: 4,
-        title: "Video Editor - Landing Page",
+        title: "MARS Journal Trading",
         image: "/editor.png",
         tags: ["Next.js", "Tailwind", "Motion"],
         demoUrl: "https://ady-toro.vercel.app/",

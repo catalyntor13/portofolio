@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.catalintorro.com'),
   title: "Catalin Toro - Web Developer",
   description: "Personal website of Catalin Toro, a web developer with expertise in Next.js, React, Tailwind, and Framer Motion.",
-  keywords: ["Catalin Toro", "Web Developer", "Trader", "Next.js", "React", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Neon", "IDToro", "Active Boost", "Busy Bee Kindergarten", "Entrepreneur", "Digital Entrepreneurship", "Web Development Services", "Web Development", "Digital Web Development"],
+  keywords: ["Catalin Toro", "Web Developer", "Trader", "Next.js", "React", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Neon", "IDToro", "Active Boost", "Gradinita Busy Bee", "Entrepreneur", "Digital Entrepreneurship", "Web Development Services", "Web Development", "Digital Web Development"],
   authors: [
     {
       name: "Catalin Toro",
@@ -74,6 +75,7 @@ export default function RootLayout({
 
         <main className="min-h-screen">{children}</main>
         <Toaster />
+        <Analytics />
       </body>
 
     </html>
