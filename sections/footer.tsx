@@ -31,8 +31,8 @@ export default function Footer() {
 
   const navigationLinks = [
 
-    { name: "Projects", href: "#projects" },
-    { name: "Services", href: "#services" },
+    { name: "Proiecte", href: "#projects" },
+    { name: "Servicii", href: "#services" },
     { name: "Contact", href: "#contact" },
   ]
 
@@ -83,7 +83,7 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
-              Navigation
+              Navigație
               <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
             </h4>
             <ul className="space-y-3">
@@ -106,10 +106,10 @@ export default function Footer() {
           {/* Social & Newsletter */}
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
-              Connect
+              Conectare
               <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
             </h4>
-            <p className="text-gray-400 text-sm mb-4">Follow me for updates and new projects</p>
+            <p className="text-gray-400 text-sm mb-4">Urmărește-mă pentru actualizări și proiecte noi</p>
             <div className="flex gap-3 mb-6">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon
@@ -136,7 +136,7 @@ export default function Footer() {
             {/* Status indicator */}
             <div className="flex items-center gap-2 text-sm">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-gray-400">Available for projects</span>
+              <span className="text-gray-400">Disponibil pentru proiecte</span>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function Footer() {
         <div className="border-t border-gray-800/50 py-8">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <div className="flex items-center  gap-4 text-sm text-cyan-400">
-              <p>&copy; {new Date().getFullYear()} Catalin Toro. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Catalin Toro. Toate drepturile rezervate.</p>
 
             </div>
 

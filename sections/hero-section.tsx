@@ -73,7 +73,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Hi, I am <br className="hidden" />
+            Salut, sunt <br className="hidden" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 animate-gradient">
               Catalin
             </span>
@@ -85,7 +85,7 @@ export default function HeroSection() {
             transition={{ delay: 0.5 }}
             className="text-base lg:text-lg  text-slate-400 max-w-xl mx-auto mb-4 mt-2 leading-relaxed"
           >
-            I am a web developer passionate about the world of technology and finance. I build fast and scalable applications, emphasizing simplicity and performance.
+            Sunt un dezvoltator web pasionat de tehnologie și finanțe. Construiesc aplicații rapide și scalabile, punând accent pe simplitate și performanță.
           </motion.p>
 
           {/* Tech Stack Centered Row */}
@@ -95,7 +95,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mb-10 flex flex-col items-center"
           >
-            <p className="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wider">Tech Stack</p>
+            <p className="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wider">Tehnologii</p>
             <div className="flex flex-wrap gap-4 justify-center">
               {techStack.map((tech, index) => (
                 <div key={index} className="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/30 transition-colors group">
@@ -124,7 +124,7 @@ export default function HeroSection() {
               size="lg"
               className="min-w-[160px] h-12 rounded-full bg-white text-slate-950 hover:bg-slate-200 font-semibold text-base transition-all hover:scale-105"
             >
-              View Projects
+              Vezi Proiecte
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
 
@@ -135,7 +135,7 @@ export default function HeroSection() {
               className="min-w-[160px] h-12 rounded-full border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white backdrop-blur-sm transition-all hover:scale-105"
             >
               <Mail className="mr-2 h-4 w-4" />
-              Contact Me
+              Contactează-mă
             </Button>
           </motion.div>
         </motion.div>
@@ -148,7 +148,7 @@ export default function HeroSection() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-5 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
       >
-        <span className="text-xs text-slate-500 uppercase tracking-widest">Scroll</span>
+        <span className="text-xs text-slate-500 uppercase tracking-widest">Derulează</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-slate-500 to-transparent" />
       </motion.div>
     </section>

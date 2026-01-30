@@ -15,9 +15,9 @@ const Jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.catalintorro.com'),
-  title: "Catalin Toro - Web Developer",
-  description: "Personal website of Catalin Toro, a web developer with expertise in Next.js, React, Tailwind, and Framer Motion.",
-  keywords: ["Catalin Toro", "Web Developer", "Trader", "Next.js", "React", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Neon", "IDToro", "Active Boost", "Gradinita Busy Bee", "Entrepreneur", "Digital Entrepreneurship", "Web Development Services", "Web Development", "Digital Web Development"],
+  title: "Catalin Toro - Dezvoltator Web",
+  description: "Site personal Catalin Toro, dezvoltator web expert în Next.js, React, Tailwind și Framer Motion. Servicii de creare site-uri, landing page-uri și optimizare SEO.",
+  keywords: ["Catalin Toro", "Dezvoltator Web", "Creare Site", "Landing Page", "Aplicatii Web", "SEO", "Optimizare SEO", "Programator", "Freelancer Romania", "Next.js", "React", "Servicii Web", "Consultanta Web", "Tailwind", "Framer Motion", "Stripe", "Mollie"],
   authors: [
     {
       name: "Catalin Toro",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Catalin Toro - Web Developer",
-    description: "Personal website of Catalin Toro, a web developer with expertise in Next.js, React, Tailwind, and Framer Motion.",
+    title: "Catalin Toro - Dezvoltator Web",
+    description: "Site personal Catalin Toro, dezvoltator web expert în Next.js, React, Tailwind și Framer Motion. Servicii de creare site-uri, landing page-uri și optimizare SEO.",
     url: "https://www.catalintorro.com",
-    siteName: "Catalin Toro - Web Developer",
+    siteName: "Catalin Toro - Dezvoltator Web",
     images: [
       {
         url: "/profile.jpg",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Catalin Toro - Web Developer",
-    description: "Personal website of Catalin Toro, a web developer with expertise in Next.js, React, Tailwind, and Framer Motion.",
+    title: "Catalin Toro - Dezvoltator Web",
+    description: "Site personal Catalin Toro, dezvoltator web expert în Next.js, React, Tailwind și Framer Motion. Servicii de creare site-uri, landing page-uri și optimizare SEO.",
     images: ["/profile.jpg"],
   },
   alternates: {
@@ -69,7 +69,7 @@ export default function RootLayout({
 }) {
   return (
 
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ro" suppressHydrationWarning>
 
       <body className={`${inter.className} ${Jakarta.variable} bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white font-jakarta`}>
 

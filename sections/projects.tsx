@@ -35,9 +35,9 @@ const projects = [
     {
         id: 4,
         title: "MARS Journal Trading",
-        image: "/editor.png",
-        tags: ["Next.js", "Tailwind", "Motion"],
-        demoUrl: "https://ady-toro.vercel.app/",
+        image: "/mars.png",
+        tags: ["Next.js", "Tailwind", "Motion", "Neon"],
+        demoUrl: "https://marsjournaltrading.com/",
 
     }
 ];
@@ -56,7 +56,7 @@ export default function ProjectsSection() {
                         className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4"
                     >
                         <Rocket className="w-4 h-4" />
-                        <span>Portfolio</span>
+                        <span>Portofoliu</span>
                     </motion.div>
 
                     <motion.h2
@@ -66,7 +66,7 @@ export default function ProjectsSection() {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-4xl font-bold text-white mb-4"
                     >
-                        Recent Projects
+                        Proiecte Recente
                     </motion.h2>
 
                     <motion.p
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
                         transition={{ delay: 0.2 }}
                         className="text-slate-400 text-base max-w-xl leading-relaxed"
                     >
-                        A selection of applications that demonstrate my ability to deliver complete software solutions.
+                        O selecție de aplicații care demonstrează capacitatea mea de a livra soluții software complete.
                     </motion.p>
                 </div>
 

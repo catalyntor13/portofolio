@@ -8,14 +8,14 @@ const services = [
     {
         icon: Rocket,
         title: "Landing Page + SEO",
-        description: "High-performance landing pages designed to convert. Optimized for speed and search engines to help your business grow.",
+        description: "Landing page-uri performante, create pentru conversie. Optimizate pentru viteză și motoare de căutare pentru a-ți crește afacerea.",
         gradient: "from-blue-500 via-cyan-400 to-blue-600",
         color: "group-hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.4)]",
     },
     {
         icon: Box,
-        title: "Customize App",
-        description: "Tailored web applications built to your specific requirements. Scalable architecture, API integrations, and modern features.",
+        title: "Aplicații Personalizate",
+        description: "Aplicații web personalizate construite conform cerințelor tale specifice. Arhitectură scalabilă și funcționalități moderne.",
         gradient: "from-purple-500 via-pink-500 to-rose-500",
         color: "group-hover:shadow-[0_0_30px_-5px_rgba(236,72,153,0.4)]",
     },
@@ -39,7 +39,7 @@ export default function ServicesSection() {
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 backdrop-blur-md mb-6"
                     >
                         <Sparkles className="w-4 h-4 text-purple-400" />
-                        <span className="text-sm font-medium text-slate-300">Services</span>
+                        <span className="text-sm font-medium text-slate-300">Servicii</span>
                     </motion.div>
 
                     <motion.h2
@@ -49,9 +49,9 @@ export default function ServicesSection() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight"
                     >
-                        <span>What </span>
+                        <span>Ce </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient bg-300%">
-                            I Offer
+                            Ofer
                         </span>
                     </motion.h2>
 
@@ -62,7 +62,7 @@ export default function ServicesSection() {
                         viewport={{ once: true }}
                         className="text-slate-400 text-lg leading-relaxed"
                     >
-                        Quality services tailored to your needs, focused on performance and user experience.
+                        Servicii de calitate adaptate nevoilor tale, axate pe performanță și experiența utilizatorului.
                     </motion.p>
                 </div>
 

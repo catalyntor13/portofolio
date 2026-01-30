@@ -126,9 +126,9 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6 tracking-tight"
           >
-            <span className="text-white">Let's Work </span>
+            <span className="text-white">Hai să lucrăm </span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient bg-300%">
-              Together
+              Împreună
             </span>
           </motion.h2>
 
@@ -140,8 +140,8 @@ export default function ContactSection() {
             transition={{ delay: 0.1 }}
             className="text-slate-400 text-lg max-w-xl mx-auto leading-relaxed"
           >
-            Have a project idea?
-            Send me a message and let's turn ideas into reality.
+            Ai o idee de proiect?
+            Trimite-mi un mesaj și hai să transformăm ideile în realitate.
           </motion.p>
         </div>
 
@@ -156,10 +156,10 @@ export default function ContactSection() {
           >
             <div className="relative">
               <h3 className="text-2xl mb-3  font-medium bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Contact Me
+                Contactează-mă
               </h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Let's turn your ideas into reality! I'm ready to collaborate on innovative projects and bring value through modern technical solutions.
+                Hai să transformăm ideile tale în realitate! Sunt gata să colaborez la proiecte inovatoare și să aduc valoare prin soluții tehnice moderne.
               </p>
             </div>
 
@@ -192,7 +192,7 @@ export default function ContactSection() {
 
             {/* Social Links */}
             <div className="pt-8">
-              <h4 className="text-lg font-semibold text-gray-300 mb-4">Social Media Links</h4>
+              <h4 className="text-lg font-semibold text-gray-300 mb-4">Rețele Sociale</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => {
                   const IconComponent = social.icon
@@ -238,13 +238,13 @@ export default function ContactSection() {
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name" className="text-cyan-400 font-medium">Name</Label>
+                      <Label htmlFor="name" className="text-cyan-400 font-medium">Nume</Label>
                       <Input
                         id="name"
                         type="text"
                         {...register("name")}
                         className="w-full px-4 py-3  bg-slate-950/50 border border-white/10 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 transition-all outline-none"
-                        placeholder="Your name"
+                        placeholder="Numele tău"
                       />
                       {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
                     </div>
@@ -262,13 +262,13 @@ export default function ContactSection() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-cyan-400 font-medium">Message</Label>
+                      <Label htmlFor="message" className="text-cyan-400 font-medium">Mesaj</Label>
                       <Textarea
                         id="message"
                         {...register("message")}
                         rows={5}
                         className="w-full px-4 py-3 bg-slate-950/50 border border-white/10 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 transition-all outline-none resize-none"
-                        placeholder="Your message..."
+                        placeholder="Mesajul tău..."
                       />
                       {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
                     </div>
@@ -281,12 +281,12 @@ export default function ContactSection() {
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                          Sending...
+                          Se trimite...
                         </>
                       ) : (
                         <>
                           <Send className="mr-2 h-5 w-5" />
-                          Send Message
+                          Trimite Mesaj
                         </>
                       )}
                     </Button>
@@ -303,8 +303,8 @@ export default function ContactSection() {
                         <CheckCircle className="h-16 w-16" />
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Message sent successfully!</h3>
-                    <p className="text-cyan-300">I will reply as soon as possible.</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Mesaj trimis cu succes!</h3>
+                    <p className="text-cyan-300">Voi răspunde cât mai curând posibil.</p>
                   </div>
                 )}
               </CardContent>
