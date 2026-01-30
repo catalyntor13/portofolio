@@ -17,7 +17,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.catalintorro.com'),
   title: "Catalin Toro - Dezvoltator Web",
   description: "Site personal Catalin Toro, dezvoltator web expert în Next.js, React, Tailwind și Framer Motion. Servicii de creare site-uri, landing page-uri și optimizare SEO.",
-  keywords: ["Catalin Toro", "Dezvoltator Web", "Creare Site", "Landing Page", "Aplicatii Web", "SEO", "Optimizare SEO", "Programator", "Freelancer Romania", "Next.js", "React", "Servicii Web", "Consultanta Web", "Tailwind", "Framer Motion", "Stripe", "Mollie"],
+  keywords: ["Catalin Toro", "Dezvoltator Web", "Creare Site", "Landing Page", "Aplicatii Web", "SEO", "Optimizare SEO", "Programator", "Freelancer Romania", "Next.js", "React", "Servicii Web", "Consultanta Web", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Web Developer", "Web Design", "Web Designer", "Web Designer Romania", "Web Developer Romania", "dezvoltator web", "web developer", "creare landing page premium",
+    "dezvoltare aplicatii custom", "programator Next.js", "site prezentare rapid",
+    "creare MVP startup", "web developer romania", "dezvoltare SaaS",
+    "aplicatii web scalabile", "programator fullstack", "expert React Tailwind",
+    "servicii web development", "optimizare performanta web", "arhitect software",
+    "dezvoltare baze de date Neon", "creare dashboard financiar", "freelancer it romania"],
   authors: [
     {
       name: "Catalin Toro",
@@ -37,7 +42,7 @@ export const metadata: Metadata = {
         alt: "Catalin Toro - Web Developer",
       },
     ],
-    locale: "en_US",
+    locale: "ro_RO",
     type: "website",
   },
   twitter: {
