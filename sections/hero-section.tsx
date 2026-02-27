@@ -58,7 +58,7 @@ export default function HeroSection() {
           <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-8 group">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
             <Image
-              src="/profile.jpg"
+              src="/profile.png"
               width={200}
               height={200}
               alt="Avatar"

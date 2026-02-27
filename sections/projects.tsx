@@ -37,7 +37,7 @@ const projects = [
         title: "MARS Journal Trading",
         image: "/mars.png",
         tags: ["Next.js", "Tailwind", "Motion", "Neon"],
-        demoUrl: "https://marsjournaltrading.com/",
+        demoUrl: "https://trading-mars.vercel.app/",
 
     }
 ];
