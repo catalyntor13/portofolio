@@ -15,14 +15,14 @@ const Jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.catalintorro.com'),
-  title: "Catalin Toro - Dezvoltator Web",
-  description: "Site personal Catalin Toro, dezvoltator web expert în Next.js, React, Tailwind și Framer Motion. Servicii de creare site-uri, landing page-uri și optimizare SEO.",
-  keywords: ["Catalin Toro", "Dezvoltator Web", "Creare Site", "Landing Page", "Aplicatii Web", "SEO", "Optimizare SEO", "Programator", "Freelancer Romania", "Next.js", "React", "Servicii Web", "Consultanta Web", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Web Developer", "Web Design", "Web Designer", "Web Designer Romania", "Web Developer Romania", "dezvoltator web", "web developer", "creare landing page premium",
-    "dezvoltare aplicatii custom", "programator Next.js", "site prezentare rapid",
-    "creare MVP startup", "web developer romania", "dezvoltare SaaS",
-    "aplicatii web scalabile", "programator fullstack", "expert React Tailwind",
-    "servicii web development", "optimizare performanta web", "arhitect software",
-    "dezvoltare baze de date Neon", "creare dashboard financiar", "freelancer it romania"],
+  title: "Catalin Toro - Web Developer",
+  description: "Catalin Toro personal website, expert web developer in Next.js, React, Tailwind, and Framer Motion. Services for creating websites, landing pages, and SEO optimization.",
+  keywords: ["Catalin Toro", "Web Developer", "Website Creation", "Landing Page", "Web Applications", "SEO", "SEO Optimization", "Programmer", "Freelancer Romania", "Next.js", "React", "Web Services", "Web Consulting", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Web Design", "Web Designer", "Web Designer Romania", "Web Developer Romania", "premium landing page creation",
+    "custom application development", "Next.js programmer", "fast presentation website",
+    "startup MVP creation", "SaaS development",
+    "scalable web applications", "fullstack programmer", "React Tailwind expert",
+    "web development services", "web performance optimization", "software architect",
+    "Neon database development", "financial dashboard creation", "IT freelancer romania"],
   authors: [
     {
       name: "Catalin Toro",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Catalin Toro - Dezvoltator Web",
-    description: "Site personal Catalin Toro, dezvoltator web expert în Next.js, React, Tailwind și Framer Motion. Servicii de creare site-uri, landing page-uri și optimizare SEO.",
+    title: "Catalin Toro - Web Developer",
+    description: "Catalin Toro personal website, expert web developer in Next.js, React, Tailwind, and Framer Motion. Services for creating websites, landing pages, and SEO optimization.",
     url: "https://www.catalintorro.com",
-    siteName: "Catalin Toro - Dezvoltator Web",
+    siteName: "Catalin Toro - Web Developer",
     images: [
       {
         url: "/profile.jpg",
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
         alt: "Catalin Toro - Web Developer",
       },
     ],
-    locale: "ro_RO",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Catalin Toro - Dezvoltator Web",
-    description: "Site personal Catalin Toro, dezvoltator web expert în Next.js, React, Tailwind și Framer Motion. Servicii de creare site-uri, landing page-uri și optimizare SEO.",
+    title: "Catalin Toro - Web Developer",
+    description: "Catalin Toro personal website, expert web developer in Next.js, React, Tailwind, and Framer Motion. Services for creating websites, landing pages, and SEO optimization.",
     images: ["/profile.jpg"],
   },
   alternates: {
@@ -74,7 +74,7 @@ export default function RootLayout({
 }) {
   return (
 
-    <html lang="ro" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
 
       <body className={`${inter.className} ${Jakarta.variable} bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white font-jakarta`}>
 

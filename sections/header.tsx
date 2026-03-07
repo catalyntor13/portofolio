@@ -12,7 +12,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Detectăm scroll-ul pentru a micșora header-ul ușor
+  // Detect scroll to shrink the header slightly
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -20,8 +20,8 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: "Proiecte", href: "projects" },
-    { name: "Servicii", href: "services" },
+    { name: "Projects", href: "projects" },
+    { name: "Services", href: "services" },
     { name: "Contact", href: "contact" },
   ];
 
@@ -30,7 +30,7 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 px-4 pointer-events-none" // pointer-events-none pe wrapper ca să poți da click pe laterale
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 px-4 pointer-events-none" // pointer-events-none on wrapper to allow clicking sides
     >
       <div
         className={cn(
@@ -47,7 +47,7 @@ export default function Header() {
             P
           </div>
           <span className="font-bold text-lg tracking-tight text-slate-200 group-hover:text-white transition-colors">
-            Portofolio
+            Portfolio
           </span>
         </button>
 
@@ -60,7 +60,7 @@ export default function Header() {
               className="px-4 cursor-pointer py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all duration-300 relative group"
             >
               {item.name}
-              {/* Linie fină jos la hover */}
+              {/* Fine line at the bottom on hover */}
               <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-blue-500 rounded-full transition-all duration-300 group-hover:w-1/2 opacity-0 group-hover:opacity-100" />
             </button>
           ))}
