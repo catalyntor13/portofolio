@@ -1,156 +1,78 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import scrollToId from "@/lib/scrollToId";
 
-// Tech Stack Icons
-import Nextjs from '@/public/nextjs-icon-light-background.svg';
-import TailwindIcon from '@/public/tailwindcss.svg';
-import Motion from '@/public/motion.png';
-import Neon from '@/public/neon.png';
-
-const techStack = [
-  { name: "Next.js", icon: Nextjs },
-  { name: "Tailwind CSS", icon: TailwindIcon },
-  { name: "Framer Motion", icon: Motion },
-  { name: "Neon", icon: Neon }
-];
-
 export default function HeroSection() {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+    const fadeInUp: Variants = {
+        hidden: { opacity: 0, y: 40 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    };
 
-      {/* Background Tech Grid & Spots */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950" />
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.2 },
+        },
+    };
 
-        {/* Spotlights */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-blue-500/20 opacity-50 blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[600px] bg-purple-500/10 opacity-30 blur-[130px] rounded-full pointer-events-none" />
-      </div>
-
-      <div className="container relative z-10 px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto py-12 text-center"
-        >
-          {/* Status Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-300 text-sm font-medium mb-8 backdrop-blur-md"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            Available for projects
-          </motion.div>
-
-          {/* Avatar with Glow */}
-          <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-8 group">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
-            <Image
-              src="/profile.png"
-              width={200}
-              height={200}
-              alt="Avatar"
-              className="relative w-full h-full object-cover object-top rounded-full border-2 border-slate-800 shadow-2xl z-10"
-              priority
-            />
-          </div>
-
-          <motion.h1
-            className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight text-white"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            Hi, I'm <br className="hidden" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 animate-gradient">
-              Catalin
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-base lg:text-lg  text-slate-400 max-w-xl mx-auto mb-4 mt-2 leading-relaxed"
-          >
-            I am a web developer passionate about technology and finance. I build fast and scalable applications, focusing on simplicity and performance.
-          </motion.p>
-
-          {/* Tech Stack Centered Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="mb-10 flex flex-col items-center"
-          >
-            <p className="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wider">Technologies</p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              {techStack.map((tech, index) => (
-                <div key={index} className="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/30 transition-colors group">
-                  <Image
-                    src={tech.icon}
-                    alt={tech.name}
-                    width={20}
-                    height={20}
-                    className="w-5 h-5 object-contain"
-                  />
-                  <span className="text-slate-300 text-sm font-medium group-hover:text-blue-300 transition-colors">{tech.name}</span>
-                </div>
-              ))}
+    return (
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-36 pb-32 md:pt-48 md:pb-40">
+            {/* Background Glows are handled in app/page.tsx, but we can keep subtle ones here if needed */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+                <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-emerald-500/10 opacity-40 blur-[130px] rounded-full" />
             </div>
-          </motion.div>
+
+            <div className="container relative z-10 px-6 max-w-6xl mx-auto">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={staggerContainer}
+                    className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+                >
+                    {/* Left Column: Text */}
+                    <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
 
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button
-              onClick={() => scrollToId("projects", 80, 1200)}
-              size="lg"
-              className="min-w-[160px] h-12 rounded-full bg-white text-slate-950 hover:bg-slate-200 font-semibold text-base transition-all hover:scale-105"
-            >
-              View Projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+                        <motion.h1 variants={fadeInUp} className="text-3xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-8">
+                            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Catalin</span>
 
-            <Button
-              onClick={() => scrollToId("contact", 80, 1200)}
-              variant="outline"
-              size="lg"
-              className="min-w-[160px] h-12 rounded-full border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white backdrop-blur-sm transition-all hover:scale-105"
-            >
-              <Mail className="mr-2 h-4 w-4" />
-              Contact Me
-            </Button>
-          </motion.div>
-        </motion.div>
-      </div>
+                        </motion.h1>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-5 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
-      >
-        <span className="text-xs text-slate-500 uppercase tracking-widest">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-slate-500 to-transparent" />
-      </motion.div>
-    </section>
-  );
+                        <motion.p variants={fadeInUp} className="text-base md:text-lg lg:text-xl text-slate-400 max-w-2xl leading-relaxed mb-12 px-4 lg:px-0">
+                            I am web developer and an active trader. I build fast and scalable applications, focusing on simplicity and performance.
+                        </motion.p>
+
+                        <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 lg:px-0">
+                            <button onClick={() => scrollToId("contact", 80, 1200)} className="bg-emerald-500 hover:bg-emerald-400 cursor-pointer text-slate-950 font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-lg shadow-emerald-500/25">
+                                Let's Talk <ArrowRight size={20} />
+                            </button>
+                        </motion.div>
+                    </div>
+
+                    {/* Right Column: Image */}
+                    <motion.div variants={fadeInUp} className="mx-auto lg:ml-auto relative group w-full max-w-[280px] sm:max-w-[320px] md:max-w-[320px] lg:max-w-none mb-8 lg:mb-0">
+                        {/* Glow Behind Image */}
+                        <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-emerald-500/40 to-cyan-500/40 blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-700 -z-10" />
+
+                        <div className="relative aspect-square w-full rounded-[2.5rem] overflow-hidden border-2 border-slate-700/50 shadow-2xl bg-slate-900 group-hover:border-emerald-500/50 transition-colors duration-500">
+                            <Image
+                                src="/profile.jpg"
+                                fill
+                                alt="Profile Avatar"
+                                className="object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                                priority
+                            />
+                            {/* Overlay Gradient for integration */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none" />
+                        </div>
+                    </motion.div>
+                </motion.div>
+            </div>
+        </section>
+    );
 }

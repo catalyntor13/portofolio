@@ -18,7 +18,7 @@ import { toast } from "react-hot-toast"
 
 import {
   Mail,
-  Instagram,
+  Linkedin,
   Github,
   Send,
   Sparkles,
@@ -79,19 +79,19 @@ export default function ContactSection() {
       icon: Github,
       href: "https://github.com/catalyntor13",
       label: "GitHub",
-      gradient: "from-gray-600 to-gray-800",
+      gradient: "from-slate-600 to-slate-800",
     },
     {
       icon: FaXTwitter,
       href: "https://x.com/@catalintorro",
       label: "X",
-      gradient: "from-blue-600 to-blue-800",
+      gradient: "from-emerald-600 to-cyan-600",
     },
     {
-      icon: Instagram,
-      href: "https://www.instagram.com/catalynn13",
-      label: "Instagram",
-      gradient: "from-indigo-600 to-purple-600",
+      icon: Linkedin,
+      href: "https://linkedin.com/in/catalintorro",
+      label: "LinkedIn",
+      gradient: "from-cyan-600 to-blue-600",
     },
   ]
 
@@ -112,11 +112,11 @@ export default function ContactSection() {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-white/10 mb-6 relative group"
+            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border border-white/10 mb-6 relative group"
           >
             <Send className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
             {/* Strălucire la hover */}
-            <div className="absolute inset-0 bg-blue-500/20 blur-md rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-emerald-500/20 blur-md rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </motion.div>
 
           {/* Title */}
@@ -127,7 +127,7 @@ export default function ContactSection() {
             className="text-3xl md:text-5xl font-bold mb-6 tracking-tight"
           >
             <span className="text-white">Let's Work </span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient bg-300%">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 animate-gradient bg-300%">
               Together
             </span>
           </motion.h2>
@@ -155,7 +155,7 @@ export default function ContactSection() {
             className="space-y-8"
           >
             <div className="relative">
-              <h3 className="text-2xl mb-3  font-medium bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              <h3 className="text-2xl mb-3  font-medium bg-gradient-to-r from-emerald-400 via-cyan-500 to-cyan-600 bg-clip-text text-transparent">
                 Get in Touch
               </h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
@@ -169,17 +169,17 @@ export default function ContactSection() {
 
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/30 transition-all cursor-pointer"
+              className="group p-6 rounded-2xl bg-slate-900/50 shadow-xl backdrop-blur-sm border border-slate-700 hover:border-emerald-500/50 transition-all cursor-pointer"
             >
               <div className="flex items-center gap-4 ">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-cyan-400" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-cyan-600/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Mail className="w-6 h-6 text-emerald-400" />
                 </div>
                 <div>
                   <p className="text-sm text-slate-500 mb-1">Email</p>
                   <button
                     onClick={handleCopyEmail}
-                    className="text-white font-medium hover:text-cyan-400 transition-colors "
+                    className="text-white font-medium hover:text-emerald-400 transition-colors "
                   >
                     torobuisnessro@yahoo.com
                   </button>
@@ -230,44 +230,44 @@ export default function ContactSection() {
           >
 
 
-            <Card className="group relative rounded-2xl overflow-hidden bg-white/5  backdrop-blur-sm border border-white/10 hover:border-cyan-500/30 transition-all duration-300 ">
+            <Card className="group relative rounded-2xl overflow-hidden bg-slate-900/50 shadow-2xl backdrop-blur-sm border border-slate-700 hover:border-emerald-500/50 transition-all duration-300 ">
               {/* Background Gradient Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-cyan-500/5 to-cyan-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <CardContent className="p-8 relative z-10">
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name" className="text-cyan-400 font-medium">Name</Label>
+                      <Label htmlFor="name" className="text-emerald-400 font-medium">Name</Label>
                       <Input
                         id="name"
                         type="text"
                         {...register("name")}
-                        className="w-full px-4 py-3  bg-slate-950/50 border border-white/10 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 transition-all outline-none"
+                        className="w-full px-4 py-3 bg-slate-950/80 border border-slate-700 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder:text-slate-500 transition-all outline-none rounded-xl"
                         placeholder="Your name"
                       />
                       {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="email" className="text-cyan-400 font-medium">Email</Label>
+                      <Label htmlFor="email" className="text-emerald-400 font-medium">Email</Label>
                       <Input
                         id="email"
                         type="email"
                         {...register("email")}
-                        className="w-full px-4 py-3  bg-slate-950/50 border border-white/10 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 transition-all outline-none"
+                        className="w-full px-4 py-3 bg-slate-950/80 border border-slate-700 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder:text-slate-500 transition-all outline-none rounded-xl"
                         placeholder="email@example.com"
                       />
                       {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-cyan-400 font-medium">Message</Label>
+                      <Label htmlFor="message" className="text-emerald-400 font-medium">Message</Label>
                       <Textarea
                         id="message"
                         {...register("message")}
                         rows={5}
-                        className="w-full px-4 py-3 bg-slate-950/50 border border-white/10 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 transition-all outline-none resize-none"
+                        className="w-full px-4 py-3 bg-slate-950/80 border border-slate-700 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder:text-slate-500 transition-all outline-none resize-none rounded-xl"
                         placeholder="Your message..."
                       />
                       {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
@@ -276,7 +276,7 @@ export default function ContactSection() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center gap-2"
+                      className="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -304,16 +304,16 @@ export default function ContactSection() {
                       </div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">Message sent successfully!</h3>
-                    <p className="text-cyan-300">I will reply as soon as possible.</p>
+                    <p className="text-emerald-300">I will reply as soon as possible.</p>
                   </div>
                 )}
               </CardContent>
 
 
               <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-                <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
-                <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
-                <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
+                <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-emerald-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
+                <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
+                <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-emerald-300 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
               </div>
             </Card>
 
@@ -323,9 +323,9 @@ export default function ContactSection() {
         {/* Bottom decoration */}
         <div className="flex justify-center mt-16">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-blue-400" />
-            <Sparkles className="h-5 w-5 text-blue-300 animate-pulse" />
-            <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-blue-400" />
+            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-emerald-400" />
+            <Sparkles className="h-5 w-5 text-emerald-300 animate-pulse" />
+            <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-emerald-400" />
           </div>
         </div>
       </div>

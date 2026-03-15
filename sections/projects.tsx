@@ -1,135 +1,118 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Rocket, Github, ArrowUpRight } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { LineChart, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 const projects = [
     {
+        id: 4,
+        title: "MARS Trading Journal",
+        description: "A high-performance trading dashboard built from scratch to solve the discipline problem in day trading. Features detailed analytics and visualizes equity curves without the bloat.",
+        image: "/mars.png",
+        tags: ["Next.js", "Tailwind", "Motion", "Neon"],
+        demoUrl: "https://trading-mars.vercel.app/",
+        status: "Featured"
+    },
+    {
         id: 1,
         title: "IDToro",
+        description: "Modern landing page and interactive platform with a premium feel, showcasing smooth animations and user-focused design.",
         image: "/idtoro.png",
         tags: ["Next.js", "Tailwind", "Motion"],
         demoUrl: "https://idtoro.vercel.app/",
-
+        status: "Production"
     },
     {
         id: 2,
         title: "Active Boost",
+        description: "Beautiful landing page with checkout integration. Features dynamic routing and seamless payments via Mollie.",
         image: "/activeboost.png",
-        tags: ["Next.js", "Mollie", "Neon", "Tailwind"],
+        tags: ["Next.js", "Mollie", "Tailwind"],
         demoUrl: "https://activeboost.ro",
-
+        status: "Production"
     },
     {
         id: 3,
         title: "Gradinita Busy Bee",
+        description: "A welcoming, responsive website for a kindergarten with contact form and SEO optimized.",
         image: "/gradinita.png",
-        tags: ["Next.js", "Tailwind", "Motion", "Mollie"],
+        tags: ["Next.js", "Tailwind", "Motion"],
         demoUrl: "https://gradinitabusybee.ro/",
-
-    },
-
-    {
-        id: 4,
-        title: "MARS Journal Trading",
-        image: "/mars.png",
-        tags: ["Next.js", "Tailwind", "Motion", "Neon"],
-        demoUrl: "https://trading-mars.vercel.app/",
-
+        status: "Production"
     }
 ];
 
 export default function ProjectsSection() {
+    const fadeInUp: Variants = {
+        hidden: { opacity: 0, y: 40 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.2 },
+        },
+    };
+
     return (
-        <section id="projects" className="py-24 relative overflow-hidden bg-slate-950">
-            <div className="container mx-auto px-6 relative z-10">
+        <motion.section
+            id="projects"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="py-20 relative z-10"
+        >
+            <div className="container mx-auto px-6 max-w-5xl">
+                <motion.h2 variants={fadeInUp} className="text-2xl md:text-3xl font-bold text-white mb-10 flex items-center gap-2">
+                    <LineChart className="text-emerald-400" /> Featured Engineering
+                </motion.h2>
 
-                {/* Section Header - Compact */}
-                <div className="flex flex-col items-center text-center mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4"
-                    >
-                        <Rocket className="w-4 h-4" />
-                        <span>Portfolio</span>
-                    </motion.div>
-
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-4xl font-bold text-white mb-4"
-                    >
-                        Recent Projects
-                    </motion.h2>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-slate-400 text-base max-w-xl leading-relaxed"
-                    >
-                        A selection of applications that demonstrate my ability to deliver complete software solutions.
-                    </motion.p>
-                </div>
-
-                {/* Projects Grid - 3 Columns & Visual Cards */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="space-y-12">
                     {projects.map((project, index) => (
-                        <motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="group"
-                        >
-                            <Link href={project.demoUrl} target="_blank" className="block">
-                                <div className={cn(
-                                    "relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 transition-all duration-500 group-hover:border-slate-600 group-hover:shadow-2xl group-hover:shadow-blue-500/10"
-                                )}>
-                                    {/* Image Area - Aspect Video */}
-                                    <div className="relative aspect-video overflow-hidden">
-                                        <div className="absolute inset-0 bg-slate-950/10 z-10 group-hover:bg-transparent transition-colors duration-500" />
+                        <motion.div key={project.id} variants={fadeInUp} className="group relative bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all duration-500 shadow-xl">
+                            <Link href={project.demoUrl} target="_blank" className="block md:flex">
+
+                                <div className="md:w-1/2 bg-slate-950 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-800 relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent z-0 group-hover:from-emerald-500/10 transition-colors duration-500" />
+
+                                    <div className="w-full aspect-video bg-slate-900 border border-slate-700 rounded-lg shadow-2xl flex items-center justify-center relative z-10 overflow-hidden">
                                         <Image
                                             src={project.image || "/placeholder.png"}
                                             alt={project.title}
                                             fill
                                             className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                         />
-                                        {/* Overlay Title for clean look */}
-                                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-20 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                            <div className="flex items-center justify-between">
-                                                <span className="text-white font-semibold text-sm">{project.title}</span>
-                                                <ArrowUpRight className="w-4 h-4 text-blue-400" />
-                                            </div>
-                                        </div>
+                                        <div className="absolute inset-0 bg-emerald-500/0 group-hover:bg-emerald-500/10 transition-colors duration-500 mix-blend-overlay" />
+                                    </div>
+                                </div>
+
+                                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">{project.title}</h3>
+                                        <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 transition-colors opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 duration-300" />
                                     </div>
 
-                                    {/* Bottom Info - minimal */}
-                                    <div className="p-4 bg-slate-950/50 backdrop-blur-sm border-t border-slate-800">
-                                        <div className="flex items-center justify-between mb-3">
-                                            <h3 className="text-lg font-bold text-slate-100 group-hover:text-blue-400 transition-colors">
-                                                {project.title}
-                                            </h3>
-                                        </div>
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tags.map((tag) => (
-                                                <span
-                                                    key={tag}
-                                                    className="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold text-slate-400 bg-slate-900/50 rounded-md border border-slate-800 group-hover:border-slate-700 transition-colors"
-                                                >
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
+                                    <p className="text-slate-400 mb-6 leading-relaxed">
+                                        {project.description}
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-2 mb-8 mt-auto">
+                                        {project.tags.map((tag, i) => (
+                                            <span key={i} className="px-3 py-1 bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-100/70 rounded-full group-hover:border-emerald-500/30 transition-colors">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <div>
+                                        <span className="text-emerald-500 font-medium text-sm border-b border-emerald-500/30 pb-1">
+                                            {project.status}
+                                        </span>
                                     </div>
                                 </div>
                             </Link>
@@ -137,6 +120,6 @@ export default function ProjectsSection() {
                     ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

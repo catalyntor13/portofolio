@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import {
   Github,
-  Instagram,
+  Linkedin,
   ArrowUp,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -42,21 +42,21 @@ export default function Footer() {
       href: "https://github.com/catalyntor13",
       icon: Github,
       gradient: "from-gray-600 to-gray-800",
-      hoverColor: "hover:text-blue-400",
+      hoverColor: "hover:text-emerald-400",
     },
     {
       name: "Twitter",
       href: "https://x.com/@catalintorro",
       icon: FaXTwitter,
-      gradient: "from-blue-600 to-blue-800",
-      hoverColor: "hover:text-blue-400",
+      gradient: "from-cyan-600 to-cyan-800",
+      hoverColor: "hover:text-emerald-400",
     },
     {
-      name: "Instagram",
-      href: "https://www.instagram.com/catalynn13",
-      icon: Instagram,
-      gradient: "from-green-600 to-emerald-600",
-      hoverColor: "hover:text-blue-400",
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/catalintorro",
+      icon: Linkedin,
+      gradient: "from-emerald-600 to-green-500",
+      hoverColor: "hover:text-emerald-400",
     },
   ]
 
@@ -65,14 +65,14 @@ export default function Footer() {
     <footer className="relative bg-slate-950 border-t border-slate-900 overflow-hidden">
       {/* Background decoration */}
 
-      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[140px]" />
+      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-emerald-600/20 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-cyan-600/15 rounded-full blur-[140px]" />
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-ping opacity-20" />
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-20 animation-delay-1000" />
-        <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-20 animation-delay-2000" />
+        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-emerald-400 rounded-full animate-ping opacity-20" />
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-20 animation-delay-1000" />
+        <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-emerald-500 rounded-full animate-ping opacity-20 animation-delay-2000" />
       </div>
 
       <div className="container px-6 relative z-10">
@@ -84,17 +84,17 @@ export default function Footer() {
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
               Navigation
-              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
+              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-emerald-400 via-cyan-500 to-cyan-600 rounded-full" />
             </h4>
             <ul className="space-y-3">
               {navigationLinks.map((link, index) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-300 transition-all duration-300 hover:translate-x-1 inline-flex items-center group"
+                    className="text-gray-400 hover:text-emerald-300 transition-all duration-300 hover:translate-x-1 inline-flex items-center group"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-300 transition-all duration-300 mr-0 group-hover:mr-2 rounded-full" />
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-300 transition-all duration-300 mr-0 group-hover:mr-2 rounded-full" />
                     {link.name}
                   </Link>
                 </li>
@@ -107,7 +107,7 @@ export default function Footer() {
           <div className="md:col-span-1 md:mx-auto">
             <h4 className="text-lg font-semibold text-white mb-6 relative">
               Connect
-              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full" />
+              <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-emerald-400 via-cyan-500 to-cyan-600 rounded-full" />
             </h4>
             <p className="text-gray-400 text-sm mb-4">Follow me for updates and new projects</p>
             <div className="flex gap-3 mb-6">
@@ -144,7 +144,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-800/50 py-8">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <div className="flex items-center  gap-4 text-sm text-cyan-400">
+            <div className="flex items-center  gap-4 text-sm text-emerald-400">
               <p>&copy; {new Date().getFullYear()} Catalin Toro. All rights reserved.</p>
 
             </div>
@@ -158,7 +158,7 @@ export default function Footer() {
       {showBackToTop && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:from-gray-200 hover:to-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
+          className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-cyan-600 hover:from-emerald-300 hover:to-cyan-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
           size="icon"
         >
           <ArrowUp className="h-5 w-5" />

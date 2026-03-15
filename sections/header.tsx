@@ -43,7 +43,7 @@ export default function Header() {
           className="group flex items-center gap-2 cursor-pointer focus:outline-none"
           onClick={() => scrollToId("home", 80, 1200)}
         >
-          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(59,130,246,0.5)] group-hover:scale-110 transition-transform">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-emerald-500 to-cyan-400 flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
             P
           </div>
           <span className="font-bold text-lg tracking-tight text-slate-200 group-hover:text-white transition-colors">
@@ -61,7 +61,7 @@ export default function Header() {
             >
               {item.name}
               {/* Fine line at the bottom on hover */}
-              <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-blue-500 rounded-full transition-all duration-300 group-hover:w-1/2 opacity-0 group-hover:opacity-100" />
+              <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-emerald-400 rounded-full transition-all duration-300 group-hover:w-1/2 opacity-0 group-hover:opacity-100" />
             </button>
           ))}
         </nav>
@@ -89,7 +89,7 @@ export default function Header() {
                       setOpen(false);
                       scrollToId(item.href, 80, 1200);
                     }}
-                    className="text-4xl font-bold text-slate-300 hover:text-blue-400 transition-colors tracking-tight"
+                    className="text-4xl font-bold text-slate-300 hover:text-emerald-400 transition-colors tracking-tight"
                   >
                     {item.name}
                   </motion.button>

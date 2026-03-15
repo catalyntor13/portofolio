@@ -9,15 +9,15 @@ const services = [
         icon: Rocket,
         title: "Landing Page + SEO",
         description: "High-performance landing pages designed for conversion. Optimized for speed and search engines to grow your business.",
-        gradient: "from-blue-500 via-cyan-400 to-blue-600",
-        color: "group-hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.4)]",
+        gradient: "from-emerald-500 via-cyan-400 to-blue-600",
+        color: "group-hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)]",
     },
     {
         icon: Box,
         title: "Custom Applications",
         description: "Custom web applications built to your specific requirements. Scalable architecture and modern functionalities.",
-        gradient: "from-purple-500 via-pink-500 to-rose-500",
-        color: "group-hover:shadow-[0_0_30px_-5px_rgba(236,72,153,0.4)]",
+        gradient: "from-cyan-500 via-blue-500 to-emerald-500",
+        color: "group-hover:shadow-[0_0_30px_-5px_rgba(6,182,212,0.4)]",
     },
 ];
 
@@ -25,7 +25,7 @@ export default function ServicesSection() {
     return (
         <section id="services" className="relative py-24 overflow-hidden bg-slate-950">
             {/* Background Ambient Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
 
@@ -38,7 +38,7 @@ export default function ServicesSection() {
                         viewport={{ once: true }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 backdrop-blur-md mb-6"
                     >
-                        <Sparkles className="w-4 h-4 text-purple-400" />
+                        <Sparkles className="w-4 h-4 text-emerald-400" />
                         <span className="text-sm font-medium text-slate-300">Services</span>
                     </motion.div>
 
@@ -50,7 +50,7 @@ export default function ServicesSection() {
                         className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight"
                     >
                         <span>What I </span>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient bg-300%">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 animate-gradient bg-300%">
                             Offer
                         </span>
                     </motion.h2>
@@ -100,7 +100,7 @@ export default function ServicesSection() {
 
                                     {/* Text Content */}
                                     <div>
-                                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-200 transition-colors">
+                                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-200 transition-colors">
                                             {service.title}
                                         </h3>
                                         <p className="text-slate-400 text-base leading-relaxed group-hover:text-slate-300 transition-colors">
