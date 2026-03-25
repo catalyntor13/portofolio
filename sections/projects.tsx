@@ -7,6 +7,15 @@ import Link from "next/link";
 
 const projects = [
     {
+        id: 5,
+        title: "WaitCrypto",
+        description: "A high-performance web3 Landing Page with crypto wallet connect and waitlist for emails",
+        image: "/waitcrypto.png",
+        tags: ["Next.js", "Tailwind", "Motion", "Neon"],
+        demoUrl: "https://web3landing-pi.vercel.app/",
+        status: "Featured"
+    },
+    {
         id: 4,
         title: "MARS Trading Journal",
         description: "A high-performance trading dashboard built from scratch to solve the discipline problem in day trading. Features detailed analytics and visualizes equity curves without the bloat.",
