@@ -1,9 +1,9 @@
 import { z } from 'zod'
 
 export const contactSchema = z.object({
-  name: z.string().min(1, "Numele este obligatoriu"),
-  email: z.string().email("Email invalid").min(1, "Emailul este obligatoriu"),
-  message: z.string().min(1, "Mesajul este obligatoriu"),
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email").min(1, "Email is required"),
+  message: z.string().min(1, "Message is required"),
 })
 
 export type ContactFormData = z.infer<typeof contactSchema>

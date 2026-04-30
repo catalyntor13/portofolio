@@ -15,17 +15,12 @@ const Jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.catalintorro.com'),
-  title: "Catalin Toro - Web Developer",
-  description: "Catalin Toro personal website, expert web developer in Next.js, React, Tailwind, and Framer Motion. Services for creating websites, landing pages, and SEO optimization.",
-  keywords: ["Catalin Toro", "Web Developer", "Website Creation", "Landing Page", "Web Applications", "SEO", "SEO Optimization", "Programmer", "Freelancer Romania", "Next.js", "React", "Web Services", "Web Consulting", "Tailwind", "Framer Motion", "Stripe", "Mollie", "Web Design", "Web Designer", "Web Designer Romania", "Web Developer Romania", "premium landing page creation",
-    "custom application development", "Next.js programmer", "fast presentation website",
-    "startup MVP creation", "SaaS development",
-    "scalable web applications", "fullstack programmer", "React Tailwind expert",
-    "web development services", "web performance optimization", "software architect",
-    "Neon database development", "financial dashboard creation", "IT freelancer romania"],
+  title: "Web Developer & Trader - Custom Trading Tools & Web Apps",
+  description: "Full-stack web developer & active trader. I build high-performance trading dashboards, analytics platforms, and web applications. Specialized in fintech, real-time data, and scalable systems.",
+  keywords: ["Web Developer", "Trader", "Trading Dashboard", "Trading Platform", "Fintech", "Trading Analytics", "Web Applications", "SaaS", "Next.js", "React", "TypeScript", "Real-time Trading", "Financial Dashboard", "Trading Tools", "Day Trading", "Trading Journal", "Performance Analytics", "Crypto Trading Platform", "Web3", "API Development", "Database Design", "Neon Postgres", "Scalable Applications", "Trading Bot", "Automated Trading", "Web Development", "Full Stack Developer"],
   authors: [
     {
-      name: "Catalin Toro",
+      name: "Web Developer & Trader",
       url: "https://www.catalintorro.com",
     },
   ],

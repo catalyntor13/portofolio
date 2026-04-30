@@ -41,14 +41,8 @@ export default function ContactSection() {
 
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [copied, setCopied] = useState(false)
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("torobuisnessro@yahoo.com")
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-    toast.success('Email copied')
-  }
+
 
   useEffect(() => {
     if (isSubmitted) {
@@ -74,26 +68,7 @@ export default function ContactSection() {
   }
 
 
-  const socialLinks = [
-    {
-      icon: Github,
-      href: "https://github.com/catalyntor13",
-      label: "GitHub",
-      gradient: "from-slate-600 to-slate-800",
-    },
-    {
-      icon: FaXTwitter,
-      href: "https://x.com/@catalintorro",
-      label: "X",
-      gradient: "from-emerald-600 to-cyan-600",
-    },
-    {
-      icon: Linkedin,
-      href: "https://linkedin.com/in/catalintorro",
-      label: "LinkedIn",
-      gradient: "from-cyan-600 to-blue-600",
-    },
-  ]
+
 
 
 
@@ -126,9 +101,9 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6 tracking-tight"
           >
-            <span className="text-white">Let's Work </span>
+            <span className="text-white">Ready to Build? </span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 animate-gradient bg-300%">
-              Together
+              Let's Talk
             </span>
           </motion.h2>
 
@@ -140,86 +115,13 @@ export default function ContactSection() {
             transition={{ delay: 0.1 }}
             className="text-slate-400 text-lg max-w-xl mx-auto leading-relaxed"
           >
-            Have a project idea?
-            Send me a message and let's turn ideas into reality.
+            Trading dashboard, real-timeanalytics, or custom web app? Let's discuss your project and bring it to life.
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-8"
-          >
-            <div className="relative">
-              <h3 className="text-2xl mb-3  font-medium bg-gradient-to-r from-emerald-400 via-cyan-500 to-cyan-600 bg-clip-text text-transparent">
-                Get in Touch
-              </h3>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                Let's turn your ideas into reality! I'm ready to collaborate on innovative projects and bring value through modern technical solutions.
-              </p>
-            </div>
-
-            {/* Contact Info Card */}
-
-            {/* Contact Card */}
-
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="group p-6 rounded-2xl bg-slate-900/50 shadow-xl backdrop-blur-sm border border-slate-700 hover:border-emerald-500/50 transition-all cursor-pointer"
-            >
-              <div className="flex items-center gap-4 ">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-cyan-600/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-emerald-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-500 mb-1">Email</p>
-                  <button
-                    onClick={handleCopyEmail}
-                    className="text-white font-medium hover:text-emerald-400 transition-colors "
-                  >
-                    torobuisnessro@yahoo.com
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-
-
-
-
-            {/* Social Links */}
-            <div className="pt-8">
-              <h4 className="text-lg font-semibold text-gray-300 mb-4">Social Networks</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => {
-                  const IconComponent = social.icon
-                  return (
-                    <Link
-                      key={social.label}
-                      href={social.href}
-                      className="group relative"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className="w-12 h-12 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-full flex items-center justify-center hover:border-gray-600/50 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                        {/* Background gradient */}
-                        <div
-                          className={`absolute inset-0 bg-gradient-to-r ${social.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-full`}
-                        />
-                        <IconComponent
-                          className={`h-6 w-6 text-gray-400 group-hover:text-white transition-colors duration-300 relative z-10`}
-                        />
-                      </div>
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-
-          </motion.div>
-
+        <div className="grid max-w-2xl mx-auto">
+       
+           
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
