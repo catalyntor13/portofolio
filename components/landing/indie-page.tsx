@@ -16,7 +16,7 @@ export default function IndiePage() {
     <>
       <div className="flex flex-col lg:flex-row gap-18 p-3 lg:p-16">
       {/* Sidebar Profile - Fixed */}
-        <div className="flex flex-col items-center border-none lg:border lg:border-slate-700 rounded-lg p-7 w-full lg:w-120 lg:fixed lg:left-4 lg:top-16 lg:h-fit">
+        <div className="flex flex-col items-center border-none lg:border lg:border-slate-700 rounded-lg p-7 w-full lg:w-120 lg:fixed lg:left-4 lg:top-16 lg:h-fit lg:z-30">
             <img src="/profile.jpg" alt="Profile Picture" className="w-48 h-48 rounded-full mb-4 border-1 border-cyan-500" />
             <h2 className="text-2xl font-bold mb-2">Catalin Toro</h2>
            <div className="flex items-start gap-3">

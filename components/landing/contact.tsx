@@ -142,7 +142,7 @@ export default function ContactSection() {
                     Get In Touch
                   </h2>
                   <p className="text-slate-400 text-sm">
-                    Having a idea or project 
+                    Have a finance app, trading tool, or web project in mind? I'd love to hear about it. Let's build something that works.
                   </p>
                 </div>
 
