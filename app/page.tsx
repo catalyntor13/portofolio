@@ -1,5 +1,5 @@
 
-import IndiePage from "@/sections/indie-page";
+import IndiePage from "@/components/landing/indie-page";
 
 
 export default function Home() {

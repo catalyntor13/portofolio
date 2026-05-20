@@ -4,12 +4,11 @@ export const Projects = [
             
             {
                 title: "MARS TRADING JOURNAL",
-    
                 description: "A trading journal web application built with Next.js, React, Tailwind CSS, and Framer Motion. It allows traders to log their trades, analyze performance, and track progress over time.",
                 favicon: "/mars.svg",
                 image: "/mars.png",
                 url: "https://journal.tradingmars.com/",
-                tags: ["Next.js", "Trading", "Analytics", "Framer Motion"]
+               
             },
             {
                 title: "Active Boost",
@@ -17,9 +16,19 @@ export const Projects = [
                 favicon: "/logo.png",
                 image: "/activeboost.png",
                 url: "https://www.activeboost.ro/",
-                tags: ["Nextjs", "Mollie", "Tailwind CSS"]
+                
+            },
+
+            {
+                title: "Gradinita Busy Bee",
+                description: "Conversion-focused landing page cu Next.js și Tailwind, optimizată pentru mobile, cu formular de contact integrat",
+                favicon: "/gradinitalogo.jpg",
+                image: "/gradinita.png",
+                url: "https://www.gradinitabusybee.ro/",
+                
             },
             
+              
                 
         ] 
     
