@@ -71,13 +71,12 @@ export default function RootLayout({
 
     <html lang="en" suppressHydrationWarning>
 
-      <body className={`${inter.className} ${Jakarta.variable} bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white font-jakarta`}>
+      <body className={`${inter.className} ${Jakarta.variable}  font-jakarta`}>
 
         <main className="min-h-screen">{children}</main>
         <Toaster />
         <Analytics />
       </body>
-
     </html>
   );
 }
