@@ -21,16 +21,16 @@ export default function IndiePage() {
             <h2 className="text-2xl font-bold mb-2">Catalin Toro</h2>
            <div className="flex items-start gap-3">
           
- <p className="text-slate-400 text-lg text-center italic ">Passionate about creating innovative web solutions and exploring the world of trading.</p>
+ <p className="text-slate-400 text-base text-center  italic ">Passionate about creating innovative web solutions and exploring the world of trading.</p>
 
            </div>
            
 
             {/* Social Links - Bigger */}
             <ul className="flex gap-6 mt-8">
-                <Link href="https://www.linkedin.com/in/catalin-toro-689181401/" target="_blank"><FaLinkedin className="w-8 h-8 cursor-pointer hover:text-cyan-400 transition-colors" /></Link>
-                <Link href="https://www.instagram.com/catalynn13" target="_blank"><FaInstagram className="w-8 h-8 cursor-pointer hover:text-cyan-400 transition-colors" /></Link>
-                <Link href="https://x.com/catalintorro" target="_blank"><FaXTwitter className="w-8 h-8 cursor-pointer hover:text-cyan-400 transition-colors" /></Link>
+                <Link href="https://www.linkedin.com/in/catalin-toro-689181401/" target="_blank"><FaLinkedin className="w-6 h-6 cursor-pointer hover:text-cyan-400 transition-colors" /></Link>
+                <Link href="https://www.instagram.com/catalynn13" target="_blank"><FaInstagram className="w-6 h-6 cursor-pointer hover:text-cyan-400 transition-colors" /></Link>
+                <Link href="https://x.com/catalintorro" target="_blank"><FaXTwitter className="w-6 h-6 cursor-pointer hover:text-cyan-400 transition-colors" /></Link>
             </ul>
                 <ContactSection />
         </div>
@@ -53,10 +53,11 @@ export default function IndiePage() {
                     >
                         {/* Header with Icon and Title */}
                         <div className="flex items-start justify-between mb-2">
-                            <div className="flex items-center gap-2 flex-1">
-                                <div className="p-2 rounded-lg text-slate-950">
-                                   <Image src={project.favicon || "/default-icon.png"} alt={`${project.title} Icon`} width={48} height={48} className="rounded" />
-                                </div>
+                            <div className="flex  flex-col gap-2 flex-1">
+                              
+                                   
+                                   
+                                  <Image src={project.image} alt={`${project.title} Screenshot`} width={400} height={400} className="rounded-lg mb-3 object-cover" />
                                 <div className="flex-1">
                                     <h2 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
                                         {project.title}
@@ -67,11 +68,11 @@ export default function IndiePage() {
                         </div>
 
                         {/* Description */}
-                        <p className="text-slate-300 text-base mb-3 leading-relaxed">
+                        <p className="text-slate-300 text-sm mb-3 leading-relaxed">
                             {project.description}
                         </p>
 
-                        <Image src={project.image} alt={`${project.title} Screenshot`} width={400} height={400} className="rounded-lg mb-3 object-cover" />
+                      
 
                     
 
